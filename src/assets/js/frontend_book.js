@@ -515,7 +515,6 @@ window.FrontendBook = window.FrontendBook || {};
             + '<strong class="text-primary">'
             + $('#select-provider option:selected').text() + '<br>'
             + selectedDate + ' ' + $('.selected-hour').text()
-            + servicePrice + ' ' + serviceCurrency
             + '</strong>' +
             '</p>';
 
@@ -536,12 +535,6 @@ window.FrontendBook = window.FrontendBook || {};
             EALang.phone + ': ' + phoneNumber +
             '<br/>' +
             EALang.email + ': ' + email +
-            '<br/>' +
-            EALang.address + ': ' + address +
-            '<br/>' +
-            EALang.city + ': ' + city +
-            '<br/>' +
-            EALang.zip_code + ': ' + zipCode +
             '</p>';
 
         $('#customer-details').html(html);

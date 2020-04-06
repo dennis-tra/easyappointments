@@ -148,7 +148,7 @@
                                 </select>
                             </div>
 
-                            <div class="form-group">
+                            <div style="display: none" class="form-group">
                                 <label for="select-provider">
                                     <strong><?= lang('select_provider') ?></strong>
                                 </label>
@@ -156,7 +156,7 @@
                                 <select id="select-provider" class="col-xs-12 col-sm-4 form-control"></select>
                             </div>
 
-                            <div id="service-description" style="display:none;"></div>
+                            <!-- <div id="service-description" style="display:none;"></div> -->
                         </div>
                     </div>
 
@@ -222,22 +222,22 @@
                                     <label for="email" class="control-label"><?= lang('email') ?> *</label>
                                     <input type="text" id="email" class="required form-control" maxlength="120" />
                                 </div>
-                                <div class="form-group">
-                                    <label for="phone-number" class="control-label"><?= lang('phone_number') ?> *</label>
-                                    <input type="text" id="phone-number" class="required form-control" maxlength="60" />
-                                </div>
                             </div>
 
                             <div class="col-xs-12 col-sm-6">
                                 <div class="form-group">
+                                    <label for="phone-number" class="control-label"><?= lang('phone_number') ?></label>
+                                    <input type="text" id="phone-number" class="form-control" maxlength="60" />
+                                </div>
+                                <div style="display: none" class="form-group">
                                     <label for="address" class="control-label"><?= lang('address') ?></label>
                                     <input type="text" id="address" class="form-control" maxlength="120" />
                                 </div>
-                                <div class="form-group">
+                                <div style="display: none" class="form-group">
                                     <label for="city" class="control-label"><?= lang('city') ?></label>
                                     <input type="text" id="city" class="form-control" maxlength="120" />
                                 </div>
-                                <div class="form-group">
+                                <div style="display: none" class="form-group">
                                     <label for="zip-code" class="control-label"><?= lang('zip_code') ?></label>
                                     <input type="text" id="zip-code" class="form-control" maxlength="120" />
                                 </div>
