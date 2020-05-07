@@ -332,6 +332,9 @@ window.BackendCalendarDefaultView = window.BackendCalendarDefaultView || {};
                 '<strong>' + EALang.phone_number + '</strong> '
                 + event.data.customer.phone_number
                 + '<hr>' +
+                '<strong>Notes</strong> '
+                + event.data.notes
+                + '<hr>' +
                 '<div class="text-center">' +
                 '<button class="edit-popover btn btn-primary ' + displayEdit + '">' + EALang.edit + '</button>' +
                 '<button class="delete-popover btn btn-danger ' + displayDelete + '">' + EALang.delete + '</button>' +
@@ -786,13 +789,13 @@ window.BackendCalendarDefaultView = window.BackendCalendarDefaultView || {};
             $calendar.fullCalendar('addEventSource', calendarEvents);
 
             var weekDays = [
-                'sunday', 
                 'monday', 
                 'tuesday', 
-                'wednesday', 
-                'thursday', 
-                'friday', 
-                'saturday' 
+                'wednesday',
+                'thursday',
+                'friday',
+                'saturday',
+                'sunday'
             ];
 
             // :: ADD PROVIDER'S UNAVAILABLE TIME PERIODS
@@ -946,8 +949,9 @@ window.BackendCalendarDefaultView = window.BackendCalendarDefaultView || {};
                                     $calendar.fullCalendar('renderEvent', unavailablePeriod, false);
                                 });
 
-                                $.each(workingPlan, function (index, workingDay) {
-                                    if (workingDay == null) {
+                                $.each(weekDays, function (index, day) {
+                                    var workingDay = workingPlan[day];
+                                    if (workingPlan[day] == null) {
                                         // Add a full day unavailable event.
                                         unavailablePeriod = {
                                             title: EALang.not_working,
